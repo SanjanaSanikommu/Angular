@@ -1,0 +1,24 @@
+<html>
+
+
+  
+  
+  <h1>REGISTRATION FORM</h1>
+  <body>
+    <form #logForm = "ngForm" (ngSubmit)="Login(logForm.value)">
+
+Name:
+  
+  <input type="text" ngModel name="username"   placeholder = "name"><br><br>
+Password:
+  <input type="password" ngModel name="password"   placeholder = "password"><br><br>
+  
+  <button type = "submit"> Submit</button>
+   </form>
+  
+
+
+
+  
+  </body>
+</html>

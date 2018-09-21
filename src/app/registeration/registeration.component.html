@@ -1,0 +1,44 @@
+<html>
+
+
+  
+  
+  <h1>REGISTRATION FORM</h1>
+  <body>
+<form #empForm = "ngForm" (ngSubmit)= "registeration(empForm.value)">
+Name:
+  
+  <input type="text" ngModel name="name"   placeholder = "name"><br><br>
+  StudentID
+   <input type="number" ngModel name="studentID" placeholder = "ID" >
+   
+   <br><br>
+   Phone:
+    <input type="number" ngModel  name="phone"  placeholder = "phone">
+    <br><br>
+    Salary:
+     <input type="text" ngModel name="salary" placeholder = "salary">
+     <br><br>
+     Gender:
+     <input type="text" ngModel name="gender" placeholder = "gender">
+     <br><br>
+     Date:
+     <input type="date" ngModel name="date" placeholder = "Date">
+     <br><br>
+  <button type = "submit"> Submit</button>
+   </form>
+   <H3>Details</H3>
+   <ul *ngFor = "let i of employee">
+<li>Name: {{i.name| gender:i.gender }}</li>
+<li>Student: {{i.studentID}}</li>
+<li>Phone:{{i.phone}}</li>
+<li>Salary:{{i.salary | currency: 'INR':true}}</li><br>
+<li>Gender:{{i.gender  }}</li>
+<li> DateofBirth:{{i.date | date: 'dd-mm-MMMM'}}</li>
+<li> Age:{{i.date | date: 'dd-mm-MMMM'|age}}</li>
+
+
+</ul>
+  
+  </body>
+</html>

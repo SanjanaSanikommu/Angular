@@ -1,0 +1,21 @@
+<html>
+ <form>
+<table>
+
+  <th>ID</th><th>Name</th><th>price</th>
+  
+  
+  <tr *ngFor = "let i of products">
+      <td>{{i.id }}</td>
+      <td>{{i.name}}</td>
+      <td> {{i.price}}</td>
+      <td> {{i.des}}</td>
+      <img [src] = i.imagepath>     
+     
+      
+      
+  </tr>
+  
+</table>
+</form>
+</html>
